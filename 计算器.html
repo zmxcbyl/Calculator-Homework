@@ -1,0 +1,96 @@
+<!doctype html>
+<meta charset="utf-8">
+
+<head>
+
+    <title>计算器</title>
+
+    <script type="text/javascript">
+
+        var jieguo;
+
+        var str;
+        
+        function onclicknum(nums) {
+            str = document.getElementById("num");
+            str.value = str.value + nums;
+        }
+        function onclickclear() {
+            str = document.getElementById("num");
+            str.value = "";
+        }
+        function onclickjieguo() {
+            str = document.getElementById("num");
+            jieguo = eval(str.value);
+            str.value = jieguo;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!--通篇没写按钮style-->
+    <table border="2" align="center">
+        <tr>
+            <td colspan="10">
+                <input type="text" id="num">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="1" id="1" onclick="onclicknum(1)">
+            </td>
+            <td>
+                <input type="button" value="2" id="2" onclick="onclicknum(2)">
+            </td>
+            <td>
+                <input type="button" value="3" id="3" onclick="onclicknum(3)">
+            </td>
+            <td>
+                <input type="button" value="4" id="4" onclick="onclicknum(4)">
+            </td>
+            <td>
+                <input type="button" value="5" id="5" onclick="onclicknum(5)">
+            </td>
+            <td>
+                <input type="button" value="6" id="6" onclick="onclicknum(6)">
+            </td>
+            <td>
+                <input type="button" value="7" id="7" onclick="onclicknum(7)">
+            </td>
+            <td>
+                <input type="button" value="8" id="8" onclick="onclicknum(8)">
+            </td>
+            <td>
+                <input type="button" value="9" id="9" onclick="onclicknum(9)">
+            </td>
+            <td>
+                <input type="button" value="0" id="0" onclick="onclicknum(0)">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1">
+                <input TYPE="button" value="+" id="jia" onclick="onclicknum('+')">
+            </td>
+            <td colspan="1">
+                <input type="button" value="-" id="jian" onclick="onclicknum('-')">
+            </td>
+            <td colspan="1">
+                <input type="button" value="*" id="cheng" onclick="onclicknum('*')">
+            </td>
+            <td colspan="1">
+                <input type="button" value="/" id="chu" onclick="onclicknum('/')">
+            </td>
+            <td colspan="1">
+                <input type="button" value="." id="dian" onclick="onclicknum('.')">
+            </td>
+            <td colspan="1">
+                <input type="button" value="Del" id="tui" onclick="onclickclear()">
+            </td>
+            <td colspan="4">
+                <input type="button" value="=" id="deng" onclick="onclickjieguo()">
+            </td>
+        </tr>
+
+    </table>
+</body>
