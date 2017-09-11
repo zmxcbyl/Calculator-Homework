@@ -1,0 +1,44 @@
+html{
+    background-color: #474646 ;
+}
+#calulator{
+    background-color: #ADADAD ; 
+    margin : 15px 15px 15px 15px ;
+    width : 330px ;
+    height : 400px ;
+    padding : 15px ; 
+    border: 4px solid #0C0B0B ;
+}
+#screen{
+    margin: 5px 5px 5px 5px ; 
+}
+.screen{
+    width : 306px ;
+    height : 40px ;
+    text-align : right ;
+    font-size : 20px ;      
+}
+#keys{
+    border : 2px solid #0C0B0B;
+    margin : 5px 5px 5px 5px ;  
+    width : 310px ;
+    height : 300px ;
+    margin-top : 25px ; 
+}
+.numbuttons{
+    width : 70px ; 
+    height : 75px ; 
+    text-align : center ;
+    background-color : #CEAF01 ;
+}
+.gnbuttons{
+    width : 70px ;
+    height : 75px ; 
+    text-align : center ; 
+    background-color : #CE5D01 ;
+}
+.dengbuttons{
+    width : 148px ;
+    height : 75px ;
+    background-color : #CE5D01 ;    
+}
