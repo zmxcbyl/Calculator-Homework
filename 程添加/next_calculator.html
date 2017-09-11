@@ -1,0 +1,176 @@
+<!DOCTYPE>
+<html>
+<head>
+    <script src="http://apps.bdimg.com/libs/vue/1.0.14/vue.js"></script>
+    <style>
+        .my-calculator {
+            width: 350px ;
+            height: 300px;
+        }
+        .my-calculator .show-anwser {
+            padding: 5px 10px;
+            text-align: right;
+        }
+        .my-calculator .key-matrix {
+            width: 100% ;
+        }
+        .my-calculator .key-matrix .row:after {
+            content: " " ;
+            clear: both ;
+        }
+        .my-calculator .key-matrix .one-key{
+            float:left ;
+            width: 60px;
+            height:60px;
+            padding: 5px; 
+            
+        }
+        .my-calculator .key-matrix button{
+            background: #FFF ;
+            border: 1px solid #333 ;
+            border-radius: 3px ;
+            width: 100% ;
+            height: 100% ;
+            cursor: pointer;
+        }
+        .my-calculator .key-matrix .row .one-key button:hover{
+            background: #DCDCDC ;
+            border: 1px solid #0082c6 ;
+        }
+        .my-calculator .key-matrix .row .col3-left {
+            float: left ; 
+            width: 280px;
+        }
+        .my-calculator .key-matrix .row .col3-left .one-row {
+
+        }
+        .my-calculator .key-matrix .row .col3-left .one-row:after {
+            content: " " ;
+            clear: both ;
+        }
+        .my-calculator .key-matrix .two-key-horizontal {
+            float: left ; 
+            width: 130px;
+            height: 60px;
+            padding: 5px; 
+        }
+        .my-calculator .key-matrix .row .col3-right {
+            float: left; 
+        }
+        .my-calculator .key-matrix .two-key-vertical {
+            float: left ; 
+            width: 60px;
+            height: 130px;
+            padding: 5px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="my-calculator">
+        <div class="show-anwser"><span>{{ anwser }}</span></div>
+         <div class="key-matrix">
+            <!--第一行-->
+            <div class="row">
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(7)">7</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(8)">8</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(9)">9</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber('/')">/</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressChar('C')">C</button>
+                </div>
+                <div class="clr"></div>
+            </div>
+            
+            <!--第二行-->
+            <div class="row">
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(4)">4</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(5)">5</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressNumber(6)">6</button>
+                </div>
+                <div class="one-key">
+                    <button type="button" v-on:click="pressChar('x')">x</button>
+                </div>
+                <div class="one-key">
+                    <button type="button"></button>
+                </div>
+                <div class="clr"></div>
+            </div>
+            
+            <!--第三行-->
+            <div class="row">
+                <!--第三行的左半部分-->
+                <div class="col3-left">
+                    <div class="one-row">
+                        <div class="one-key">
+                            <button type="button" v-on:click="pressNumber(1)">1</button>
+                        </div>
+                        <div class="one-key">
+                            <button type="button" v-on:click="pressNumber(2)">2</button>
+                        </div>
+                        <div class="one-key">
+                            <button type="button" v-on:click="pressNumber(3)">3</button>
+                        </div>
+                        <div class="one-key">
+                            <button type="button" v-on:click="pressChar('-')">-</button>
+                        </div>
+                    </div>
+                    <div class="one-row">
+                        <div class="two-key-horizontal">
+                            <button type="button" v-on:click="pressNumber(0)">0</button>
+                        </div>
+                        <div class="one-key">
+                            <button type="button"></button>
+                        </div>
+                        <div class="one-key">
+                            <button type="button" v-on:click="pressChar('+')">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!--第三行的右半部分-->
+                <div class="col3-right">
+                    <div class="two-key-vertical">
+                        <button type="button" v-on:click="pressChar('=')">=</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="answer-list">
+        <p v-for="oneAnwserData in listData">{{ oneAnwserData }}</p>
+    </div>
+</body>
+<script>
+    var vueObj = new Vue({
+        el: "body" ,
+        data: {
+            anwser: 0 ,
+            listData: []
+        }, 
+        methods: {
+            pressNumber: function(num){
+                console.log('press a number is : '+ num)
+                this.listData.push('a number ' + num);
+            } ,
+            pressChar: function(char){
+                console.log('press a char is : '+ char)
+                //计算逻辑好烦啊，懒得写了
+                 this.listData.push('a char ' + char);
+            } 
+        }
+    });
+</script>
+</html>
