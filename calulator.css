@@ -1,44 +1,47 @@
-html{
-    background-color: #474646 ;
-}
-#calulator{
-    background-color: #ADADAD ; 
-    margin : 15px 15px 15px 15px ;
-    width : 330px ;
-    height : 400px ;
-    padding : 15px ; 
-    border: 4px solid #0C0B0B ;
-}
-#screen{
-    margin: 5px 5px 5px 5px ; 
+.calulator{
+    width: 368px ;
+    margin: 5px ; 
+    padding: 5px;
+    border: 2px solid #0F0E0E ;
 }
 .screen{
-    width : 306px ;
-    height : 40px ;
-    text-align : right ;
-    font-size : 20px ;      
+    width: 350px ;
+    height: 50px ;
+    margin: 5px ; 
+    padding: 5px;
+    border: 2px solid #C1BBBB ;
+     float: left ;
 }
-#keys{
-    border : 2px solid #0C0B0B;
-    margin : 5px 5px 5px 5px ;  
-    width : 310px ;
-    height : 300px ;
-    margin-top : 25px ; 
+.keyboard{
+    float: left ;
 }
-.numbuttons{
-    width : 70px ; 
-    height : 75px ; 
-    text-align : center ;
-    background-color : #CEAF01 ;
+.button_one{
+    width: 70px ;
+    height: 70px ;
+    margin: 5px ;
+    padding : 5px ;
+    border: 1px solid #C1BBBB ;
+    float: left ;
+  }
+.button_zero{
+    width: 162px ;
+    height: 70px ;
+    margin: 5px ;
+    padding: 5px ;
+    border: 1px solid #C1BBBB ;
+    float:left ;
 }
-.gnbuttons{
-    width : 70px ;
-    height : 75px ; 
-    text-align : center ; 
-    background-color : #CE5D01 ;
+.button_result{
+    width: 70px ;
+    height: 162px ;
+    margin: 5px ;
+    padding: 5px ;
+    border: 1px solid #C1BBBB ;
+    float:left ;
 }
-.dengbuttons{
-    width : 148px ;
-    height : 75px ;
-    background-color : #CE5D01 ;    
+.row5_l{
+    float: left ;
+}
+.row_r{
+    float: left ; 
 }

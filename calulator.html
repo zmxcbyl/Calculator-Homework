@@ -2,45 +2,90 @@
 <html>
 
 <head>
-    <meta id="utf-8">
-    <title>计算器</title>
+    <meta charset="utf-8">
+    <title>Calulator</title>
     <link rel="stylesheet" href="calulator.css">
 </head>
 
 <body>
-    <div id="calulator">
-        <div id="screen">
-            <div class="screen">
-                <input type="text" id="screen" name="screen" class="screen" />
-            </div>
+    <!-- 画计算器边框 -->
+    <div class="calulator">
+        <!-- 画显示器 -->
+        <div class="screen">
         </div>
-        <div id="keys">
-            <div>
-                <input type="button" id="7" onclick="onclicknums" value="7" class="numbuttons" />
-                <input type="button" id="8" onclick="onclickunms" value="8" class="numbuttons" />
-                <input type="button" id="9" onclick="onclicknums" value="9" class="numbuttons" />
-                <input type="button" id="+" onclick="onclicknums" value="+" class="gnbuttons" />
+        <!-- 画键盘 问题1：为什么我画出来的按钮那么丑，那么小一个按钮，外面还有一个框框-->
+        <div calss="Keyboard">
+            <!-- 画第一行按钮 问题2：为什么那天画按钮的时候前几行按钮也在外面套了框框，我这样没套框框也实现了，但是后面画等号的时候出了问题-->
+            <div class="button_one">
+                <button type="button">+</button>
             </div>
-            <div>
-                <input type="button" id="4" onclick="onclicknums" value="4" class="numbuttons" />
-                <input type="button" id="5" onclick="onclickunms" value="5" class="numbuttons" />
-                <input type="button" id="6" onclick="onclicknums" value="6" class="numbuttons" />
-                <input type="button" id="-" onclick="onclicknums" value="-" class="gnbuttons" />
+            <div class="button_one">
+                <button type="button">-</button>
             </div>
-            <div>
-                <input type="button" id="3" onclick="onclicknums" value="3" class="numbuttons" />
-                <input type="button" id="2" onclick="onclickunms" value="2" class="numbuttons" />
-                <input type="button" id="1" onclick="onclicknums" value="1" class="numbuttons" />
-                <input type="button" id="*" onclick="onclicknums" value="*" class="gnbuttons" />
+            <div class="button_one">
+                <button type="button">*</button>
             </div>
-            <div>
-                <input type="button" id="=" onclick="onclickresult" value="=" class="dengbuttons" />
-                <input type="button" id="0" onclick="onclickunms" value="0" class="numbuttons" />
-                <input type="button" id="/" onclick="onclicknums" value="/" class="gnbuttons" />
+            <div class="button_one">
+                <button type="button">/</button>
+            </div>
+           
+            <!-- 画第二行按钮 -->
+            <div class="button_one">
+                <button type="button">7</button>
+            </div>
+            <div class="button_one">
+                <button type="button">8</button>
+            </div>
+            <div class="button_one">
+                <button type="button">9</button>
+            </div>
+            <div class="button_one">
+                <button type="button"></button>
+            </div>
+        
+            <!-- 画第三行按钮 -->
+            <div class="button_one">
+                <button type="button">4</button>
+            </div>
+            <div class="button_one">
+                <button type="button">5</button>
+            </div>
+            <div class="button_one">
+                <button type="button">6</button>
+            </div>
+            <div class="button_one">
+                <button type="button"></button>
+            </div>
+       
+            <!-- 画第四行第五行左边按钮 问题3：如果我不在0和.的按钮外面套一个框框那么等号的上部分是和.这一行对其的，我不大明白-->
+            <div class="row5_l">
+                <div class="button_one">
+                    <button type="button">1</button>
+                </div>
+                <div class="button_one">
+                    <button type="button">2</button>
+                </div>
+                <div class="button_one">
+                    <button type="button">3</button>
+                </div>
+                <div>
+                    <div class="button_zero">
+                        <button type="button">0</button>
+                    </div>
+                    <div class="button_one">
+                        <button type="button">.</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 画等号 -->
+            <div class="row5_r">
+                <div class="button_result">
+                    <button type="button">=</button>
+                </div>
+                <div style="clear:both"></div>
             </div>
         </div>
     </div>
 </body>
 
 </html>
-
